@@ -1,0 +1,48 @@
+/* Botão padrão */
+
+button {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1abc9c;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-right: 1rem;
+}
+
+
+/* Estilos para botão desativado */
+
+button.disabled {
+    background-color: #ccc;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+
+/* Estilos para botão inválido */
+
+button.invalid {
+    background-color: #f00;
+    color: #fff;
+}
+
+
+/* Estilos para botão ativo */
+
+button.active {
+    background-color: #00f;
+    color: #fff;
+}
+
+
+/* Estilos para botão correto */
+
+button.correct {
+    background-color: #0f0;
+    color: #fff;
+}
