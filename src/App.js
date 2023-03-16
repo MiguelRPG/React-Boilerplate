@@ -5,8 +5,6 @@ import Footer from './components/Footer';
 
 import Home from './pages/Home'
 
-
-
 const App = () => {
     return (
       <div className='main-content'>
@@ -18,6 +16,5 @@ const App = () => {
       </div>
     );
 };
-
 
 export default App;
