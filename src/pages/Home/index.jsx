@@ -1,10 +1,14 @@
-import React from "react";
-
-import Button from "../../components/Button";
+import React, {useState} from "react";
 
 import "./style.css";
 
+import Button from "../../components/Button";
+import Input from "../../components/Input";
+
+
 const Home = () => {
+  const [name, setName] = useState('');
+  
   const handleClick = () => {
     console.log("Button clicked");
   };
@@ -47,6 +51,42 @@ const Home = () => {
       <Button theme="correct" onClick={handleClick}>
         Correto
       </Button>
+
+      <Input 
+        type="text"
+        value={name}
+        defaultValue="Miguel RPG"
+        placeholder="Digite o seu nome"
+        name="fild-exp-01"
+        id="fild-exp-01"
+        theme="fild-exp-01"
+        onChange={e => setName(e.target.value)}
+      />
+
+      <Input 
+        type="text"
+        placeholder="Digite o seu nome"
+        name="fild-exp-02"
+        id="fild-exp-02"
+        theme="error"
+      />
+    
+      <Input 
+        type="password"
+        placeholder="Digite o sua senha"
+        name="fild-pwd-01"
+        id="fild-pwd-01"
+        theme=""
+      />
+
+      <Input 
+        type="password"
+        placeholder="Senha com erro"
+        name="fild-pwd-02"
+        id="fild-pwd-02"
+        theme="error"
+      />
+    
     </>
   );
 };

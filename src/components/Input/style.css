@@ -1,0 +1,55 @@
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    transform-origin: top left;
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.2s ease-out;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px solid #2196f3;
+}
+
+.input:focus+.label,
+.input:not(:placeholder-shown)+.label {
+    transform: translateY(-18px) scale(0.75);
+}
+
+.input.error {
+    border-color: #f44336;
+}
+
+.input.error:focus {
+    border-color: #f44336;
+}
+
+.input.error:focus+.label {
+    color: #f44336;
+}
+
+.input.password {
+    letter-spacing: 0.3em;
+}
+
+.input.password:focus {
+    letter-spacing: normal;
+}
