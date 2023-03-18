@@ -5,6 +5,7 @@ import "./style.css";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 import Select from "../../components/Select";
+import CheckboxGroup from "../../components/Checkbox";
 
 const Home = () => {
   // Input
@@ -31,6 +32,28 @@ const Home = () => {
   };
 
   // /Select
+
+  // Checkbox
+
+  const [checkboxOptions, setCheckboxOptions] = useState([
+    { name: "opt01", id: "opt01", value: "1", label: "Normal", checked: false },
+    { name: "opt02", id: "opt02", value: "2", label: "Desabilitado", checked: false, disabled: true},
+    { name: "opt03", id: "opt03", value: "3", label: "Inválido", checked: false, theme: 'invalid' },
+    { name: "opt04", id: "opt04", value: "4", label: "Correto", checked: false, theme: 'valid' }
+  ]);
+
+  const checkboxChange = (value, checked) => {
+    const newOptions = checkboxOptions.map((option) => {
+      if (option.value === value) {
+        return { ...option, checked };
+      } else {
+        return option;
+      }
+    });
+    setCheckboxOptions(newOptions);
+  };
+
+  // /Checkbox
 
   return (
     <>
@@ -136,6 +159,12 @@ const Home = () => {
         value={selectValue}
         onChange={selectChange}
         options={selectOptions}
+      />
+
+      <CheckboxGroup
+        options={checkboxOptions}
+        name="checkbox-group-01"
+        onChange={checkboxChange}
       />
     </>
   );

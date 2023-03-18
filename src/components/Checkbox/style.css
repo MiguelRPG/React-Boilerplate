@@ -1,0 +1,21 @@
+.checkbox-group {}
+
+.checkbox-group .checkbox {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.checkbox-group label {
+    display: inline-block;
+    margin: 10px;
+    font-size: 14px;
+}
+
+.checkbox-group label.valid {
+    color: green;
+}
+
+.checkbox-group label.invalid {
+    color: red;
+}
