@@ -2,23 +2,16 @@ import React from 'react';
 
 import './style.css';
 
-const Button = ({ text, onClick, disabled, theme }) => {
+const Button = (props) => {
   return (
     <button
-      className={`button ${theme}`}
-      onClick={onClick}
-      disabled={disabled}
+      className={`button ${props.theme}`}
+      onClick={props.onClick}
+      disabled={props.disabled}
     >
-      {text}
+      {props.text}
     </button>
   );
-};
-
-Button.defaultProps = {
-  text: 'Button',
-  onClick: () => {},
-  disabled: false,
-  theme: 'default',
 };
 
 export default Button;
