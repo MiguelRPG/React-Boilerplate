@@ -1,0 +1,21 @@
+.radio-group {}
+
+.radio-group .radio {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.radio-group label {
+    display: inline-block;
+    margin: 10px;
+    font-size: 14px;
+}
+
+.radio-group label.valid {
+    color: green;
+}
+
+.radio-group label.invalid {
+    color: red;
+}

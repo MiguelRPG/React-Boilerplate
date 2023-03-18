@@ -6,6 +6,7 @@ import Button from "../../components/Button";
 import Input from "../../components/Input";
 import Select from "../../components/Select";
 import CheckboxGroup from "../../components/Checkbox";
+import RadioGroup from "../../components/Radiobox";
 
 const Home = () => {
   // Input
@@ -33,13 +34,34 @@ const Home = () => {
 
   // /Select
 
-  // Checkbox
+  // Radio
 
   const [checkboxOptions, setCheckboxOptions] = useState([
-    { name: "opt01", id: "opt01", value: "1", label: "Normal", checked: false },
-    { name: "opt02", id: "opt02", value: "2", label: "Desabilitado", checked: false, disabled: true},
-    { name: "opt03", id: "opt03", value: "3", label: "Inválido", checked: false, theme: 'invalid' },
-    { name: "opt04", id: "opt04", value: "4", label: "Correto", checked: false, theme: 'valid' }
+    { name: "checkbox01", id: "checkbox01", value: "1", label: "Normal", checked: false },
+    {
+      name: "checkbox02",
+      id: "checkbox02",
+      value: "2",
+      label: "Desabilitado",
+      checked: false,
+      disabled: true,
+    },
+    {
+      name: "checkbox03",
+      id: "checkbox03",
+      value: "3",
+      label: "Inválido",
+      checked: false,
+      theme: "invalid",
+    },
+    {
+      name: "checkbox04",
+      id: "checkbox04",
+      value: "4",
+      label: "Correto",
+      checked: false,
+      theme: "valid",
+    },
   ]);
 
   const checkboxChange = (value, checked) => {
@@ -54,6 +76,49 @@ const Home = () => {
   };
 
   // /Checkbox
+
+  // Radio
+
+  const [radioOptions, setRadioOptions] = useState([
+    { name: "radio01", id: "radio01", value: "1", label: "Normal", checked: false },
+    {
+      name: "radio02",
+      id: "radio02",
+      value: "2",
+      label: "Desabilitado",
+      checked: false,
+      disabled: true,
+    },
+    {
+      name: "radio03",
+      id: "radio03",
+      value: "3",
+      label: "Inválido",
+      checked: false,
+      theme: "invalid",
+    },
+    {
+      name: "radio04",
+      id: "radio04",
+      value: "4",
+      label: "Correto",
+      checked: false,
+      theme: "valid",
+    },
+  ]);
+
+  const radioChange = (value, checked) => {
+    const newOptions = radioOptions.map((option) => {
+      if (option.value === value) {
+        return { ...option, checked };
+      } else {
+        return option;
+      }
+    });
+    setRadioOptions(newOptions);
+  };
+
+  // /Radio
 
   return (
     <>
@@ -166,6 +231,13 @@ const Home = () => {
         name="checkbox-group-01"
         onChange={checkboxChange}
       />
+
+      <RadioGroup
+        options={radioOptions}
+        name="radio-group-01"
+        onChange={radioChange}
+      />
+
     </>
   );
 };
