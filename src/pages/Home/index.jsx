@@ -1,17 +1,36 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import "./style.css";
 
 import Button from "../../components/Button";
 import Input from "../../components/Input";
-
+import Select from "../../components/Select";
 
 const Home = () => {
-  const [name, setName] = useState('');
-  
+  // Input
+  const [name, setName] = useState("");
+  // /Input
+
+  // Button
   const handleClick = () => {
     console.log("Button clicked");
   };
+  // /Button
+
+  // Select
+  const [selectValue, setSelectValue] = useState("");
+
+  const selectOptions = [
+    { value: "option1", label: "Opção 01" },
+    { value: "option2", label: "Opção 02" },
+    { value: "option3", label: "Opção 03" },
+  ];
+
+  const selectChange = (value) => {
+    setSelectValue(value);
+  };
+
+  // /Select
 
   return (
     <>
@@ -52,41 +71,72 @@ const Home = () => {
         Correto
       </Button>
 
-      <Input 
+      <Input
         type="text"
         value={name}
         defaultValue="Miguel RPG"
         placeholder="Digite o seu nome"
-        name="fild-exp-01"
-        id="fild-exp-01"
-        theme="fild-exp-01"
-        onChange={e => setName(e.target.value)}
+        name="field-exp-01"
+        id="field-exp-01"
+        theme="field-exp-01"
+        onChange={(e) => setName(e.target.value)}
       />
 
-      <Input 
+      <Input
         type="text"
         placeholder="Digite o seu nome"
-        name="fild-exp-02"
-        id="fild-exp-02"
+        name="field-exp-02"
+        id="field-exp-02"
         theme="error"
       />
-    
-      <Input 
+
+      <Input
         type="password"
         placeholder="Digite o sua senha"
-        name="fild-pwd-01"
-        id="fild-pwd-01"
+        name="field-pwd-01"
+        id="field-pwd-01"
         theme=""
       />
 
-      <Input 
+      <Input
         type="password"
         placeholder="Senha com erro"
-        name="fild-pwd-02"
-        id="fild-pwd-02"
+        name="field-pwd-02"
+        id="field-pwd-02"
         theme="error"
       />
-    
+
+      <Select
+        name="select-01"
+        id="select-01"
+        value={selectValue}
+        onChange={selectChange}
+        options={selectOptions}
+        disabled
+      />
+      <Select
+        name="select-02"
+        id="select-02"
+        value={selectValue}
+        onChange={selectChange}
+        options={selectOptions}
+      />
+      <Select
+        name="select-03"
+        id="select-03"
+        theme="valid"
+        value={selectValue}
+        onChange={selectChange}
+        options={selectOptions}
+      />
+      <Select
+        name="select-04"
+        id="select-04"
+        theme="error"
+        value={selectValue}
+        onChange={selectChange}
+        options={selectOptions}
+      />
     </>
   );
 };
