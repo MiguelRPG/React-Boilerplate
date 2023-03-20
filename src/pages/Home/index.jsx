@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./style.css";
 
 import Button from "../../components/Button";
-import Input from "../../components/Input";
+import Input, { Email } from "../../components/Input";
 import Select from "../../components/Select";
 import CheckboxGroup from "../../components/Checkbox";
 import RadioGroup from "../../components/Radiobox";
@@ -37,7 +37,13 @@ const Home = () => {
   // Radio
 
   const [checkboxOptions, setCheckboxOptions] = useState([
-    { name: "checkbox01", id: "checkbox01", value: "1", label: "Normal", checked: false },
+    {
+      name: "checkbox01",
+      id: "checkbox01",
+      value: "1",
+      label: "Normal",
+      checked: false,
+    },
     {
       name: "checkbox02",
       id: "checkbox02",
@@ -80,7 +86,13 @@ const Home = () => {
   // Radio
 
   const [radioOptions, setRadioOptions] = useState([
-    { name: "radio01", id: "radio01", value: "1", label: "Normal", checked: false },
+    {
+      name: "radio01",
+      id: "radio01",
+      value: "1",
+      label: "Normal",
+      checked: false,
+    },
     {
       name: "radio02",
       id: "radio02",
@@ -194,6 +206,12 @@ const Home = () => {
         theme="error"
       />
 
+      <Email
+        placeholder="Este campo é de email"
+        name="field-email-01"
+        id="field-email-01"
+      />
+
       <Select
         name="select-01"
         id="select-01"
@@ -237,7 +255,6 @@ const Home = () => {
         name="radio-group-01"
         onChange={radioChange}
       />
-
     </>
   );
 };

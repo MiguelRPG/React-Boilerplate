@@ -5,7 +5,7 @@ import './style.css';
 const Input = (props) => {
   return (
     <input
-      type={props.type}
+      type={props.type || "text"}
       name={props.name}
       defaultValue={props.defaultValue}
       id={props.id}
@@ -17,4 +17,15 @@ const Input = (props) => {
   );
 };
 
+const Email = (props) => {
+  return (
+    <Input
+      {...props}  
+      type="email"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+    />
+  );
+}
+
 export default Input;
+export {Email};
