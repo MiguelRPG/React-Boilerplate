@@ -7,6 +7,7 @@ import Input, { Email } from "../../components/Input";
 import Select from "../../components/Select";
 import CheckboxGroup from "../../components/Checkbox";
 import RadioGroup from "../../components/Radiobox";
+import Submit from "../../components/Submit";
 
 const Home = () => {
   // Input
@@ -132,6 +133,13 @@ const Home = () => {
 
   // /Radio
 
+  // Submit
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Lógica para enviar o formulário
+  };
+  // /Submit
+
   return (
     <>
       <h1>React-Boilerplate</h1>
@@ -157,104 +165,108 @@ const Home = () => {
         altamente personalizável e pode ser facilmente adaptado às necessidades
         do seu projeto específico.
       </p>
+      <form onSubmit={handleSubmit}>
+        <Button theme="disabled" disabled>
+          Desativado
+        </Button>
+        <Button theme="invalid" onClick={handleClick}>
+          Inválido
+        </Button>
+        <Button theme="active" onClick={handleClick}>
+          Ativo
+        </Button>
+        <Button theme="correct" onClick={handleClick}>
+          Correto
+        </Button>
 
-      <Button theme="disabled" disabled>
-        Desativado
-      </Button>
-      <Button theme="invalid" onClick={handleClick}>
-        Inválido
-      </Button>
-      <Button theme="active" onClick={handleClick}>
-        Ativo
-      </Button>
-      <Button theme="correct" onClick={handleClick}>
-        Correto
-      </Button>
+        <Input
+          type="text"
+          value={name}
+          defaultValue="Miguel RPG"
+          placeholder="Digite o seu nome"
+          name="field-exp-01"
+          id="field-exp-01"
+          theme="field-exp-01"
+          onChange={(e) => setName(e.target.value)}
+        />
 
-      <Input
-        type="text"
-        value={name}
-        defaultValue="Miguel RPG"
-        placeholder="Digite o seu nome"
-        name="field-exp-01"
-        id="field-exp-01"
-        theme="field-exp-01"
-        onChange={(e) => setName(e.target.value)}
-      />
+        <Input
+          type="text"
+          placeholder="Digite o seu nome"
+          name="field-exp-02"
+          id="field-exp-02"
+          theme="error"
+        />
 
-      <Input
-        type="text"
-        placeholder="Digite o seu nome"
-        name="field-exp-02"
-        id="field-exp-02"
-        theme="error"
-      />
+        <Input
+          type="password"
+          placeholder="Digite o sua senha"
+          name="field-pwd-01"
+          id="field-pwd-01"
+          theme=""
+        />
 
-      <Input
-        type="password"
-        placeholder="Digite o sua senha"
-        name="field-pwd-01"
-        id="field-pwd-01"
-        theme=""
-      />
+        <Input
+          type="password"
+          placeholder="Senha com erro"
+          name="field-pwd-02"
+          id="field-pwd-02"
+          theme="error"
+        />
 
-      <Input
-        type="password"
-        placeholder="Senha com erro"
-        name="field-pwd-02"
-        id="field-pwd-02"
-        theme="error"
-      />
+        <Email
+          placeholder="Este campo é de email"
+          name="field-email-01"
+          id="field-email-01"
+        />
 
-      <Email
-        placeholder="Este campo é de email"
-        name="field-email-01"
-        id="field-email-01"
-      />
+        <Select
+          name="select-01"
+          id="select-01"
+          value={selectValue}
+          onChange={selectChange}
+          options={selectOptions}
+          disabled
+        />
+        <Select
+          name="select-02"
+          id="select-02"
+          value={selectValue}
+          onChange={selectChange}
+          options={selectOptions}
+        />
+        <Select
+          name="select-03"
+          id="select-03"
+          theme="valid"
+          value={selectValue}
+          onChange={selectChange}
+          options={selectOptions}
+        />
+        <Select
+          name="select-04"
+          id="select-04"
+          theme="error"
+          value={selectValue}
+          onChange={selectChange}
+          options={selectOptions}
+        />
 
-      <Select
-        name="select-01"
-        id="select-01"
-        value={selectValue}
-        onChange={selectChange}
-        options={selectOptions}
-        disabled
-      />
-      <Select
-        name="select-02"
-        id="select-02"
-        value={selectValue}
-        onChange={selectChange}
-        options={selectOptions}
-      />
-      <Select
-        name="select-03"
-        id="select-03"
-        theme="valid"
-        value={selectValue}
-        onChange={selectChange}
-        options={selectOptions}
-      />
-      <Select
-        name="select-04"
-        id="select-04"
-        theme="error"
-        value={selectValue}
-        onChange={selectChange}
-        options={selectOptions}
-      />
+        <CheckboxGroup
+          options={checkboxOptions}
+          name="checkbox-group-01"
+          onChange={checkboxChange}
+        />
 
-      <CheckboxGroup
-        options={checkboxOptions}
-        name="checkbox-group-01"
-        onChange={checkboxChange}
-      />
+        <RadioGroup
+          options={radioOptions}
+          name="radio-group-01"
+          onChange={radioChange}
+        />
 
-      <RadioGroup
-        options={radioOptions}
-        name="radio-group-01"
-        onChange={radioChange}
-      />
+        <Submit className="submit-button" label="Enviar" />
+      
+      </form>
     </>
   );
 };
