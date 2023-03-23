@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./style.css";
 
 import Button from "../../components/Button";
-import Input, { Email } from "../../components/Input";
+import Input, { Email, Tel } from "../../components/Input";
 import Select from "../../components/Select";
 import CheckboxGroup from "../../components/Checkbox";
 import RadioGroup from "../../components/Radiobox";
@@ -218,6 +218,12 @@ const Home = () => {
           placeholder="Este campo é de email"
           name="field-email-01"
           id="field-email-01"
+        />
+
+        <Tel
+          placeholder="Seu telefone"
+          name="field-tel-01"
+          id="field-tel-01"
         />
 
         <Select
