@@ -180,38 +180,68 @@ const Home = () => {
         </Button>
 
         <Input
+          label="Nome"
           type="text"
           value={name}
           defaultValue="Miguel RPG"
           placeholder="Digite o seu nome"
           name="field-exp-01"
           id="field-exp-01"
-          theme="field-exp-01"
+          className="field-exp-01"
+          required="true"
+          autocomplete="name"
           onChange={(e) => setName(e.target.value)}
         />
 
         <Input
+          label="Empresa"
           type="text"
-          placeholder="Digite o seu nome"
+          placeholder="Digite o sua empresa"
           name="field-exp-02"
           id="field-exp-02"
-          theme="error"
+          required="true"
+          autocomplete="organization"
+          status="error"
+          errorMsg="Informe sua empresa"
         />
 
         <Input
+          label="Endereço"
+          type="text"
+          placeholder="Seu endereço"
+          name="field-exp-03"
+          id="field-exp-03"
+          autocomplete="street-address"
+          status="valid"
+        />
+
+        <Input
+          label="Senha"
           type="password"
-          placeholder="Digite o sua senha"
+          placeholder="Senha com erro"
           name="field-pwd-01"
           id="field-pwd-01"
-          theme=""
+          autocomplete="new-password"
         />
-
+        
         <Input
+          label="Senha"
           type="password"
           placeholder="Senha com erro"
           name="field-pwd-02"
           id="field-pwd-02"
-          theme="error"
+          autocomplete="new-password"
+          status="valid"
+        />
+
+        <Input
+          label="Senha"
+          type="password"
+          placeholder="Senha com erro"
+          name="field-pwd-03"
+          id="field-pwd-03"
+          autocomplete="new-password"
+          status="error"
         />
 
         <Email
@@ -220,11 +250,7 @@ const Home = () => {
           id="field-email-01"
         />
 
-        <Tel
-          placeholder="Seu telefone"
-          name="field-tel-01"
-          id="field-tel-01"
-        />
+        <Tel placeholder="Seu telefone" name="field-tel-01" id="field-tel-01" />
 
         <Select
           name="select-01"
@@ -271,7 +297,6 @@ const Home = () => {
         />
 
         <Submit className="submit-button" label="Enviar" />
-      
       </form>
     </>
   );

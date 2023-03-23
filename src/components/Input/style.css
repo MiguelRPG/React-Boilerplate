@@ -38,6 +38,14 @@
     border-color: #f44336;
 }
 
+.inputs .error {
+    color: #f44336;
+}
+
+.input.valid {
+    border-color: green;
+}
+
 .input.error:focus {
     border-color: #f44336;
 }
@@ -52,4 +60,9 @@
 
 .input.password:focus {
     letter-spacing: normal;
+}
+
+.inputs label {
+    display: inline-block;
+    width: 100%;
 }

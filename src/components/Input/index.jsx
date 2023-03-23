@@ -4,27 +4,39 @@ import "./style.css";
 
 const Input = (props) => {
   return (
-    <>
+    <div className="inputs">
+      {props.label && (
+        <label htmlFor={props.id}>
+          {props.label}
+          {props.required && <span aria-hidden="true">*</span>}
+        </label>
+      )}
+
       <input
         type={props.type || "text"}
         name={props.name}
-        defaultValue={props.defaultValue}
         id={props.id}
-        className={`input ${props.theme}`}
-        disabled={props.disabled}
+        defaultValue={props.defaultValue}
+        className={`input ${props.className ? props.className : ""} ${props.status ? props.status : ''}`}
         placeholder={props.placeholder}
         onChange={props.onChange}
-        autocomplete="name"
-        aria-required="true"
-        aria-invalid="true"
+        
+        required={props.required}
+        autocomplete={props.autocomplete}
+        disabled={props.disabled}
+        aria-required={props.required}
+        aria-invalid={props.status === "error" ? true : ""}
+
+
         aria-describedby={props.errorMsg ? `${props.id}-error` : undefined}
       />
+
       {props.errorMsg && (
-        <div id={`${props.id}-error`} role="alert">
+        <div id={`${props.id}-error`} className={props.status ? props.status : ''} role="alert">
           {props.errorMsg}
         </div>
       )}
-    </>
+    </div>
   );
 };
 
