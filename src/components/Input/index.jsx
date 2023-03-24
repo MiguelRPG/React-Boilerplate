@@ -17,22 +17,29 @@ const Input = (props) => {
         name={props.name}
         id={props.id}
         defaultValue={props.defaultValue}
-        className={`input ${props.className ? props.className : ""} ${props.status ? props.status : ''}`}
+        className={`input ${props.className ? props.className : ""} ${
+          props.status ? props.status : ""
+        }`}
         placeholder={props.placeholder}
         onChange={props.onChange}
-        
         required={props.required}
         autocomplete={props.autocomplete}
         disabled={props.disabled}
         aria-required={props.required}
         aria-invalid={props.status === "error" ? true : ""}
-
-
         aria-describedby={props.errorMsg ? `${props.id}-error` : undefined}
+
+        pattern={props.pattern}
+        min={props.min}
+        max={props.max}
       />
 
       {props.errorMsg && (
-        <div id={`${props.id}-error`} className={props.status ? props.status : ''} role="alert">
+        <div
+          id={`${props.id}-error`}
+          className={props.status ? props.status : ""}
+          role="alert"
+        >
           {props.errorMsg}
         </div>
       )}
@@ -54,5 +61,18 @@ const Tel = (props) => {
   return <Input {...props} type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />;
 };
 
+const Date = (props) => {
+  return (
+    <Input
+      {...props}
+      type="date"
+      min={props.min}
+      max="2014-04-09"
+      name="oi"
+      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+    />
+  );
+};
+
 export default Input;
-export { Email, Tel };
+export { Email, Tel, Date };

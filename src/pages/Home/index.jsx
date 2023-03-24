@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./style.css";
 
 import Button from "../../components/Button";
-import Input, { Email, Tel } from "../../components/Input";
+import Input, { Email, Tel, Date } from "../../components/Input";
 import Select from "../../components/Select";
 import CheckboxGroup from "../../components/Checkbox";
 import RadioGroup from "../../components/Radiobox";
@@ -223,7 +223,7 @@ const Home = () => {
           id="field-pwd-01"
           autocomplete="new-password"
         />
-        
+
         <Input
           label="Senha"
           type="password"
@@ -245,12 +245,27 @@ const Home = () => {
         />
 
         <Email
+          label="E-mail"
           placeholder="Este campo é de email"
           name="field-email-01"
           id="field-email-01"
         />
 
-        <Tel placeholder="Seu telefone" name="field-tel-01" id="field-tel-01" />
+        <Tel
+          label="Telefone"
+          placeholder="Seu telefone"
+          name="field-tel-01"
+          id="field-tel-01"
+        />
+
+        <Date
+          label="Data de Nascimento"
+          name="field-date-01"
+          id="field-date-01"
+          min="1950-01-01"
+          max="2012-01-01"
+          required
+        />
 
         <Select
           name="select-01"
