@@ -68,7 +68,6 @@ const Date = (props) => {
       type="date"
       min={props.min}
       max="2014-04-09"
-      name="oi"
       pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
     />
   );
