@@ -297,7 +297,6 @@ const Home = () => {
           label="Selecione (com erro)"
           name="select-04"
           id="select-04"
-          theme="error"
           value={selectValue}
           onChange={selectChange}
           options={selectOptions}
@@ -307,6 +306,7 @@ const Home = () => {
         />
 
         <CheckboxGroup
+          label="Selecione"
           options={checkboxOptions}
           name="checkbox-group-01"
           onChange={checkboxChange}
