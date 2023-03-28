@@ -12,3 +12,30 @@ body {
     background: #F0F0F5;
     -webkit-font-smoothing: antialiased;
 }
+
+.inputs {
+    width: 100%;
+    padding: 0 0 10px 0;
+}
+
+.inputs .error:not(label,
+div) {
+    outline: 1px solid red;
+}
+
+.inputs .error {
+    color: red;
+}
+
+.inputs .valid:not(label,
+div) {
+    outline: 1px solid green;
+}
+
+.inputs .error:focus {
+    border-color: #f44336;
+}
+
+.inputs label.error {
+    color: #f44336;
+}

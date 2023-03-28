@@ -29,31 +29,6 @@
     border: 1px solid #2196f3;
 }
 
-.input:focus+.label,
-.input:not(:placeholder-shown)+.label {
-    transform: translateY(-18px) scale(0.75);
-}
-
-.input.error {
-    border-color: #f44336;
-}
-
-.inputs .error {
-    color: #f44336;
-}
-
-.input.valid {
-    border-color: green;
-}
-
-.input.error:focus {
-    border-color: #f44336;
-}
-
-.input.error:focus+.label {
-    color: #f44336;
-}
-
 .input.password {
     letter-spacing: 0.3em;
 }

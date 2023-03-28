@@ -22,11 +22,3 @@ select.disabled {
 .select.active {
     border-color: blue;
 }
-
-.select.error {
-    border-color: red;
-}
-
-.select.valid {
-    border-color: green;
-}

@@ -6,7 +6,10 @@ const Input = (props) => {
   return (
     <div className="inputs">
       {props.label && (
-        <label htmlFor={props.id}>
+        <label 
+        htmlFor={props.id}
+        className={`${props.status ? props.status : ''}`}
+        >
           {props.label}
           {props.required && <span aria-hidden="true">*</span>}
         </label>

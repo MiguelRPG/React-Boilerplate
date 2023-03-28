@@ -227,7 +227,7 @@ const Home = () => {
         <Input
           label="Senha"
           type="password"
-          placeholder="Senha com erro"
+          placeholder="Senha válida"
           name="field-pwd-02"
           id="field-pwd-02"
           autocomplete="new-password"
@@ -268,6 +268,7 @@ const Home = () => {
         />
 
         <Select
+          label="Selecione"
           name="select-01"
           id="select-01"
           value={selectValue}
@@ -276,6 +277,7 @@ const Home = () => {
           disabled
         />
         <Select
+          label="Selecione"
           name="select-02"
           id="select-02"
           value={selectValue}
@@ -283,20 +285,25 @@ const Home = () => {
           options={selectOptions}
         />
         <Select
+          label="Selecione (válido)"
           name="select-03"
           id="select-03"
-          theme="valid"
+          status="valid"
           value={selectValue}
           onChange={selectChange}
           options={selectOptions}
         />
         <Select
+          label="Selecione (com erro)"
           name="select-04"
           id="select-04"
           theme="error"
           value={selectValue}
           onChange={selectChange}
           options={selectOptions}
+          required
+          status="error"
+          errorMsg="Selecione uma opção válida"
         />
 
         <CheckboxGroup
