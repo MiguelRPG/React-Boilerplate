@@ -59,7 +59,7 @@ const Home = () => {
       value: "3",
       label: "Inválido",
       checked: false,
-      theme: "invalid",
+      className: "error",
     },
     {
       name: "checkbox04",
@@ -67,7 +67,41 @@ const Home = () => {
       value: "4",
       label: "Correto",
       checked: false,
-      theme: "valid",
+      className: "valid",
+    },
+  ]);
+  
+  const [checkboxOptions02, setCheckboxOptions02] = useState([
+    {
+      name: "checkbox01",
+      id: "checkbox01",
+      value: "1",
+      label: "Normal",
+      checked: false,
+    },
+    {
+      name: "checkbox02",
+      id: "checkbox02",
+      value: "2",
+      label: "Desabilitado",
+      checked: false,
+      disabled: true,
+    },
+    {
+      name: "checkbox03",
+      id: "checkbox03",
+      value: "3",
+      label: "Inválido",
+      checked: false,
+      className: "error",
+    },
+    {
+      name: "checkbox04",
+      id: "checkbox04",
+      value: "4",
+      label: "Correto",
+      checked: false,
+      className: "valid",
     },
   ]);
 
@@ -80,6 +114,17 @@ const Home = () => {
       }
     });
     setCheckboxOptions(newOptions);
+  };
+  
+  const checkboxChange02 = (value, checked) => {
+    const newOptions = checkboxOptions02.map((option) => {
+      if (option.value === value) {
+        return { ...option, checked };
+      } else {
+        return option;
+      }
+    });
+    setCheckboxOptions02(newOptions);
   };
 
   // /Checkbox
@@ -306,10 +351,22 @@ const Home = () => {
         />
 
         <CheckboxGroup
-          label="Selecione"
+          label="Selecione nenhum ou vários"
           options={checkboxOptions}
           name="checkbox-group-01"
+          id="checkbox-group-01"
           onChange={checkboxChange}
+        />
+        
+        <CheckboxGroup
+          label="Selecione ao menos um ou vários (com erro)"
+          options={checkboxOptions02}
+          name="checkbox-group-02"
+          id="checkbox-group-02"
+          onChange={checkboxChange02}
+          required
+          status="error"
+          errorMsg="Selecione ao menos uma opção"
         />
 
         <RadioGroup

@@ -13,7 +13,8 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.inputs {
+.inputs,
+.inputs-checkbox {
     width: 100%;
     padding: 0 0 10px 0;
 }
@@ -23,7 +24,8 @@ div) {
     outline: 1px solid red;
 }
 
-.inputs .error {
+.inputs .error,
+.inputs-checkbox .error {
     color: red;
 }
 

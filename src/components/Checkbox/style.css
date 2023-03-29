@@ -2,13 +2,13 @@
 
 .checkbox-group .checkbox {
     display: inline-block;
-    margin: 10px 0;
+    margin-right: 5px;
     font-size: 14px;
 }
 
 .checkbox-group label {
     display: inline-block;
-    margin: 10px;
+    margin-right: 10px;
     font-size: 14px;
 }
 
@@ -16,6 +16,6 @@
     color: green;
 }
 
-.checkbox-group label.invalid {
+.checkbox-group label.error {
     color: red;
 }
