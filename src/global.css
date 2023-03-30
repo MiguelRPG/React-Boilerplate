@@ -14,7 +14,8 @@ body {
 }
 
 .inputs,
-.inputs-checkbox {
+.inputs-checkbox,
+.inputs-radio {
     width: 100%;
     padding: 0 0 10px 0;
 }
@@ -25,7 +26,8 @@ div) {
 }
 
 .inputs .error,
-.inputs-checkbox .error {
+.inputs-checkbox .error,
+.inputs-radio .error {
     color: red;
 }
 

@@ -176,6 +176,51 @@ const Home = () => {
     setRadioOptions(newOptions);
   };
 
+  const [radioOptions02, setRadioOptions02] = useState([
+    {
+      name: "radio201",
+      id: "radio201",
+      value: "1",
+      label: "Normal",
+      checked: true,
+    },
+    {
+      name: "radio202",
+      id: "radio202",
+      value: "2",
+      label: "Desabilitado",
+      checked: false,
+      disabled: true,
+    },
+    {
+      name: "radio203",
+      id: "radio203",
+      value: "3",
+      label: "Inválido",
+      checked: false,
+      className: "error",
+    },
+    {
+      name: "radio204",
+      id: "radio204",
+      value: "4",
+      label: "Correto",
+      checked: false,
+      className: "valid",
+    },
+  ]);
+
+  const radioChange02 = (value, checked) => {
+    const newOptions = radioOptions02.map((option) => {
+      if (option.value === value) {
+        return { ...option, checked };
+      } else {
+        return option;
+      }
+    });
+    setRadioOptions02(newOptions);
+  };
+
   // /Radio
 
   // Submit
@@ -370,9 +415,22 @@ const Home = () => {
         />
 
         <RadioGroup
-          options={radioOptions}
+          label="Selecione apenas um"
           name="radio-group-01"
+          id="radio-group-01"
+          options={radioOptions}
           onChange={radioChange}
+        />
+        
+        <RadioGroup
+          label="Selecione apenas um (com erro)"
+          name="radio-group-02"
+          id="radio-group-02"
+          options={radioOptions02}
+          onChange={radioChange02}
+          required
+          status="error"
+          errorMsg="Selecione ao menos uma opção"
         />
 
         <Submit className="submit-button" label="Enviar" />
