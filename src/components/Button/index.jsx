@@ -4,7 +4,7 @@ import "./style.css";
 
 const Button = (props) => {
   return (
-    <div className="inputs">
+    <div className="inputs-actions">
 
       <button
         name={props.name}

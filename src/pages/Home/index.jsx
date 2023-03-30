@@ -70,7 +70,7 @@ const Home = () => {
       className: "valid",
     },
   ]);
-  
+
   const [checkboxOptions02, setCheckboxOptions02] = useState([
     {
       name: "checkbox201",
@@ -115,7 +115,7 @@ const Home = () => {
     });
     setCheckboxOptions(newOptions);
   };
-  
+
   const checkboxChange02 = (value, checked) => {
     const newOptions = checkboxOptions02.map((option) => {
       if (option.value === value) {
@@ -256,17 +256,22 @@ const Home = () => {
         do seu projeto específico.
       </p>
       <form onSubmit={handleSubmit}>
-        <Button theme="disabled" disabled>
+        <Button className="disabled" disabled>
           Desativado
         </Button>
-        <Button theme="invalid" onClick={handleClick}>
-          Inválido
-        </Button>
-        <Button theme="active" onClick={handleClick}>
+        <Button className="active" onClick={handleClick}>
           Ativo
         </Button>
-        <Button theme="correct" onClick={handleClick}>
+        <Button status="valid" onClick={handleClick}>
           Correto
+        </Button>
+        <Button
+          id="button-04-error"
+          status="error"
+          errorMsg="Revise os dados"
+          onClick={handleClick}
+        >
+          Inválido
         </Button>
 
         <Input
@@ -402,7 +407,7 @@ const Home = () => {
           id="checkbox-group-01"
           onChange={checkboxChange}
         />
-        
+
         <CheckboxGroup
           label="Selecione ao menos um ou vários (com erro)"
           options={checkboxOptions02}
@@ -421,7 +426,7 @@ const Home = () => {
           options={radioOptions}
           onChange={radioChange}
         />
-        
+
         <RadioGroup
           label="Selecione apenas um (com erro)"
           name="radio-group-02"
