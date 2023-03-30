@@ -2,13 +2,13 @@
 
 .radio-group .radio {
     display: inline-block;
-    margin: 10px 0;
+    margin-right: 5px;
     font-size: 14px;
 }
 
 .radio-group label {
     display: inline-block;
-    margin: 10px;
+    margin-right: 10px;
     font-size: 14px;
 }
 
@@ -16,6 +16,6 @@
     color: green;
 }
 
-.radio-group label.invalid {
+.radio-group label.error {
     color: red;
 }

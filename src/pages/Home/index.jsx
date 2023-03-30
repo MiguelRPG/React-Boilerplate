@@ -153,7 +153,7 @@ const Home = () => {
       value: "3",
       label: "Inválido",
       checked: false,
-      theme: "invalid",
+      className: "error",
     },
     {
       name: "radio04",
@@ -161,7 +161,7 @@ const Home = () => {
       value: "4",
       label: "Correto",
       checked: false,
-      theme: "valid",
+      className: "valid",
     },
   ]);
 
