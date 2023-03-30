@@ -1,5 +1,3 @@
-/* Botão padrão */
-
 button {
     display: inline-block;
     font-size: 1rem;
@@ -14,33 +12,21 @@ button {
     margin-right: 1rem;
 }
 
-
-/* Estilos para botão desativado */
-
 button.disabled {
     background-color: #ccc;
     color: #fff;
     cursor: not-allowed;
 }
 
-
-/* Estilos para botão inválido */
-
-button.invalid {
+button.error {
     background-color: #f00;
     color: #fff;
 }
-
-
-/* Estilos para botão ativo */
 
 button.active {
     background-color: #00f;
     color: #fff;
 }
-
-
-/* Estilos para botão correto */
 
 button.correct {
     background-color: #0f0;
