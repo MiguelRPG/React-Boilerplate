@@ -7,7 +7,7 @@ import Input, { Email, Tel, Date } from "../../components/Input";
 import Select from "../../components/Select";
 import CheckboxGroup from "../../components/Checkbox";
 import RadioGroup from "../../components/Radiobox";
-//import Submit from "../../components/Submit";
+import Textarea from "../../components/Textarea";
 
 const Home = () => {
   // Input
@@ -438,15 +438,23 @@ const Home = () => {
           errorMsg="Selecione ao menos uma opção"
         />
 
+        <Textarea
+          label="Deixe uma mensagem"
+          type="text"
+          placeholder="Digite o seu nome"
+          name="textarea-exp-01"
+          id="textarea-exp-01"
+          required="true"
+        >
+        </Textarea>
+
         <Submit id="submit-01" className="disabled" disabled>
           Submit (Desabilitado)
         </Submit>
         <Submit id="submit-02" status="active">
           Submit (Ativo)
         </Submit>
-        <Submit id="submit-03" >
-          Submit (Normal)
-        </Submit>
+        <Submit id="submit-03">Submit (Normal)</Submit>
         <Submit id="submit-04" status="error" errorMsg="Revise os campos">
           Submit (Inválido)
         </Submit>
