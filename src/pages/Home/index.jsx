@@ -2,12 +2,12 @@ import React, { useState } from "react";
 
 import "./style.css";
 
-import Button from "../../components/Button";
+import Button, { Submit } from "../../components/Button";
 import Input, { Email, Tel, Date } from "../../components/Input";
 import Select from "../../components/Select";
 import CheckboxGroup from "../../components/Checkbox";
 import RadioGroup from "../../components/Radiobox";
-import Submit from "../../components/Submit";
+//import Submit from "../../components/Submit";
 
 const Home = () => {
   // Input
@@ -438,7 +438,18 @@ const Home = () => {
           errorMsg="Selecione ao menos uma opção"
         />
 
-        <Submit className="submit-button" label="Enviar" />
+        <Submit id="submit-01" className="disabled" disabled>
+          Submit (Desabilitado)
+        </Submit>
+        <Submit id="submit-02" status="active">
+          Submit (Ativo)
+        </Submit>
+        <Submit id="submit-03" >
+          Submit (Normal)
+        </Submit>
+        <Submit id="submit-04" status="error" errorMsg="Revise os campos">
+          Submit (Inválido)
+        </Submit>
       </form>
     </>
   );

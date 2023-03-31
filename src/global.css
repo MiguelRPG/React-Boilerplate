@@ -28,7 +28,8 @@ div) {
 
 .inputs .error,
 .inputs-checkbox .error,
-.inputs-radio .error {
+.inputs-radio .erro,
+.alertby.error {
     color: red;
 }
 

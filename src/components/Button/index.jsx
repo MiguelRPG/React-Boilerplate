@@ -20,7 +20,7 @@ const Button = (props) => {
       {props.errorMsg && (
         <div
           id={`${props.id}-error`}
-          className={props.status ? props.status : ""}
+          className={`alertby ${props.status ? props.status : ""}`}
           role="alert"
         >
           {props.errorMsg}
@@ -30,4 +30,9 @@ const Button = (props) => {
   );
 };
 
+const Submit = (props) => {
+  return <Button {...props} type="submit" />;
+};
+
 export default Button;
+export { Submit };
