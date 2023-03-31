@@ -30,7 +30,7 @@ div) {
 .inputs-checkbox .error,
 .inputs-radio .erro,
 .alertby.error {
-    color: red;
+    color: #e50000;
 }
 
 .inputs .valid:not(label,

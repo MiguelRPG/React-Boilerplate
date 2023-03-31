@@ -3,7 +3,7 @@ button {
     font-size: 1rem;
     font-weight: bold;
     color: #fff;
-    background-color: #1abc9c;
+    background-color: #10816b;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     border: none;
@@ -19,7 +19,7 @@ button.disabled {
 }
 
 button.error {
-    background-color: #f00;
+    background-color: #e50000;
     color: #fff;
 }
 
