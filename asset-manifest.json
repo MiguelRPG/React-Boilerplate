@@ -1,13 +1,13 @@
 {
-    "files": {
-        "main.css": "/React-Boilerplate/static/css/main.7e26990a.css",
-        "main.js": "/React-Boilerplate/static/js/main.6db8e10f.js",
-        "index.html": "/index.html",
-        "main.7e26990a.css.map": "/React-Boilerplate/static/css/main.7e26990a.css.map",
-        "main.6db8e10f.js.map": "/React-Boilerplate/static/js/main.6db8e10f.js.map"
-    },
-    "entrypoints": [
-        "static/css/main.7e26990a.css",
-        "static/js/main.6db8e10f.js"
-    ]
+  "files": {
+    "main.css": "/static/css/main.7e26990a.css",
+    "main.js": "/static/js/main.6db8e10f.js",
+    "index.html": "/index.html",
+    "main.7e26990a.css.map": "/static/css/main.7e26990a.css.map",
+    "main.6db8e10f.js.map": "/static/js/main.6db8e10f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e26990a.css",
+    "static/js/main.6db8e10f.js"
+  ]
 }
