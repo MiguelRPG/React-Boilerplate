@@ -1,10 +1,10 @@
 {
     "files": {
-        "main.css": "/React-Boilerplate/static/css/main.7e26990a.css",
-        "main.js": "/React-Boilerplate/static/js/main.6db8e10f.js",
+        "main.css": "/React-Boilerplate/React-Boilerplate/static/css/main.7e26990a.css",
+        "main.js": "/React-Boilerplate/React-Boilerplate/static/js/main.6db8e10f.js",
         "index.html": "/index.html",
-        "main.7e26990a.css.map": "/React-Boilerplate/static/css/main.7e26990a.css.map",
-        "main.6db8e10f.js.map": "/React-Boilerplate/static/js/main.6db8e10f.js.map"
+        "main.7e26990a.css.map": "/React-Boilerplate/React-Boilerplate/static/css/main.7e26990a.css.map",
+        "main.6db8e10f.js.map": "/React-Boilerplate/React-Boilerplate/static/js/main.6db8e10f.js.map"
     },
     "entrypoints": [
         "static/css/main.7e26990a.css",
