@@ -14,7 +14,6 @@ const Radio = (props) => {
         {props.label && (
           <legend
             htmlFor={props.id}
-            className={`${props.status ? props.status : ""}`}
           >
             {props.label}
             {props.required && <span aria-hidden="true">*</span>}

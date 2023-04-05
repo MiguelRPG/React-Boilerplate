@@ -16,12 +16,16 @@
 }
 
 .textarea {
+    display: block;
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px;
     font-size: 16px;
-    transition: all 0.2s ease-out;
+    line-height: 1.4;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.2s ease-in-out;
 }
 
 .textarea:focus {

@@ -8,7 +8,6 @@ const Input = (props) => {
       {props.label && (
         <label 
         htmlFor={props.id}
-        className={`${props.status ? props.status : ''}`}
         >
           {props.label}
           {props.required && <span aria-hidden="true">*</span>}
