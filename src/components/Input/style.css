@@ -3,30 +3,26 @@
     margin-bottom: 20px;
 }
 
-.label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #333;
-    font-size: 16px;
-    font-weight: 600;
-    transform-origin: top left;
-    transition: all 0.2s ease-out;
-    pointer-events: none;
-}
-
 .input {
     width: 100%;
-    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
-    transition: all 0.2s ease-out;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.2s ease-in-out;
 }
 
 .input:focus {
     outline: none;
-    border: 1px solid #2196f3;
+    border-color: #0066cc;
+}
+
+.input:disabled {
+    background-color: #eee;
+    border-color: #ccc;
+    color: #888;
 }
 
 .input.password {
@@ -35,9 +31,4 @@
 
 .input.password:focus {
     letter-spacing: normal;
-}
-
-.inputs label {
-    display: inline-block;
-    width: 100%;
 }

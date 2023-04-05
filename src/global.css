@@ -21,6 +21,20 @@ body {
     padding: 0 0 10px 0;
 }
 
+.inputs label,
+.textarea-container label,
+legend {
+    display: inline-block;
+    width: 100%;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transform-origin: top left;
+    transition: all 0.2s ease-out;
+    pointer-events: none;
+    margin: 5px 0;
+}
+
 .inputs .error:not(label,
 div) {
     outline: 1px solid red;
@@ -30,7 +44,7 @@ div) {
 .inputs-checkbox .error,
 .inputs-radio .erro,
 .alertby.error {
-    color: #e50000;
+    color: #ff0000;
 }
 
 .inputs .valid:not(label,
@@ -39,9 +53,13 @@ div) {
 }
 
 .inputs .error:focus {
-    border-color: #f44336;
+    border-color: #ff0000;
 }
 
 .inputs label.error {
-    color: #f44336;
+    color: #ff0000;
+}
+
+.inputs label.valid {
+    color: #008000;
 }
