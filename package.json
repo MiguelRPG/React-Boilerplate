@@ -1,6 +1,6 @@
 {
     "name": "react-boilerplate",
-    "home": "https://miguelrpg.github.io/React-Boilerplate/",
+    "homepage": "https://miguelrpg.github.io/React-Boilerplate/",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
