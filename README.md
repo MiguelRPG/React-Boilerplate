@@ -11,12 +11,13 @@ O React-Boilerplate é um projeto base para auxiliar no início de novos projeto
 
 Para usar o React-Boilerplate, basta clonar o repositório e iniciar um novo projeto a partir dele:
 
-`git clone https://github.com/MiguelRPG/React-Boilerplate.git
+```shell
+git clone https://github.com/MiguelRPG/React-Boilerplate.git
 
 cd React-Boilerplate
 
-yarn install`
-
+yarn install
+```
 
 Em seguida, você pode começar a editar o código e adicionar novos componentes e estilos de acordo com as necessidades do seu projeto.
 
