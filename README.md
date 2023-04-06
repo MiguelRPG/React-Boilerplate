@@ -1,3 +1,5 @@
+ [![pages-build-deployment](https://github.com/MiguelRPG/React-Boilerplate/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/MiguelRPG/React-Boilerplate/actions/workflows/pages/pages-build-deployment) 
+
  (TEXTO By CHATGPT :D)
 # Projeto React-Boilerplate
 
@@ -7,9 +9,9 @@ O React-Boilerplate é um projeto base para auxiliar no início de novos projeto
 
 Para usar o React-Boilerplate, basta clonar o repositório e iniciar um novo projeto a partir dele:
 
-git clone https://github.com/seu-usuario/react-boilerplate.git
-cd react-boilerplate
-npm install
+git clone https://github.com/MiguelRPG/React-Boilerplate.git
+cd React-Boilerplate
+yarn install
 
 
 Em seguida, você pode começar a editar o código e adicionar novos componentes e estilos de acordo com as necessidades do seu projeto.
