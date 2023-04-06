@@ -279,7 +279,7 @@ const Home = () => {
           type="text"
           value={name}
           defaultValue="Miguel RPG"
-          placeholder="Digite o seu nome"
+          placeholder="Informe o seu nome"
           name="field-exp-01"
           id="field-exp-01"
           className="field-exp-01"
@@ -291,7 +291,7 @@ const Home = () => {
         <Input
           label="Empresa"
           type="text"
-          placeholder="Digite o sua empresa"
+          placeholder="Informe a sua empresa"
           name="field-exp-02"
           id="field-exp-02"
           required="true"
@@ -303,11 +303,27 @@ const Home = () => {
         <Input
           label="Endereço"
           type="text"
-          placeholder="Seu endereço"
+          placeholder="Informe o seu endereço"
           name="field-exp-03"
           id="field-exp-03"
           autocomplete="street-address"
           status="valid"
+        />
+
+        <Email
+          label="E-mail"
+          placeholder="Este campo é de email"
+          name="field-email-01"
+          id="field-email-01"
+        />
+
+        <Input
+          label="Email (Desabilitado)"
+          type="email"
+          placeholder="meu@email.com"
+          name="field-exp-00"
+          id="field-exp-00"
+          disabled
         />
 
         <Input
@@ -337,13 +353,6 @@ const Home = () => {
           id="field-pwd-03"
           autocomplete="new-password"
           status="error"
-        />
-
-        <Email
-          label="E-mail"
-          placeholder="Este campo é de email"
-          name="field-email-01"
-          id="field-email-01"
         />
 
         <Tel
@@ -445,8 +454,7 @@ const Home = () => {
           name="textarea-exp-01"
           id="textarea-exp-01"
           required="true"
-        >
-        </Textarea>
+        ></Textarea>
 
         <Submit id="submit-01" className="disabled" disabled>
           Submit (Desabilitado)
