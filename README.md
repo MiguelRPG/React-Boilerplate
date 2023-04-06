@@ -1,6 +1,6 @@
  [![pages-build-deployment](https://github.com/MiguelRPG/React-Boilerplate/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/MiguelRPG/React-Boilerplate/actions/workflows/pages/pages-build-deployment) 
 
- (TEXTO By CHATGPT :D)
+(TEXTO By CHATGPT :D)
 #demo: https://miguelrpg.github.io/React-Boilerplate/
 # Projeto React-Boilerplate
 
