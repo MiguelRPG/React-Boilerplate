@@ -12,6 +12,21 @@ import Textarea from "../../components/Textarea";
 const Home = () => {
   // Input
   const [name, setName] = useState("");
+
+  const fieldOnChangeValidator = (value) => {
+    if (value.trim().length < 5) {
+      return "Este campo deve ter pelo menos 5 caracteres";
+    }
+    return null;
+  };
+
+  const fieldOnBlurValidator = (value) => {
+    if (value.trim().length < 4) {
+      return "Este campo deve ter pelo menos 4 caracteres";
+    }
+    return null;
+  };
+
   // /Input
 
   // Button
@@ -278,7 +293,6 @@ const Home = () => {
           label="Nome"
           type="text"
           value={name}
-          defaultValue="Miguel RPG"
           placeholder="Informe o seu nome"
           name="field-exp-01"
           id="field-exp-01"
@@ -288,28 +302,6 @@ const Home = () => {
           onChange={(e) => setName(e.target.value)}
         />
 
-        <Input
-          label="Empresa"
-          type="text"
-          placeholder="Informe a sua empresa"
-          name="field-exp-02"
-          id="field-exp-02"
-          required="true"
-          autocomplete="organization"
-          status="error"
-          errorMsg="Informe sua empresa"
-        />
-
-        <Input
-          label="Endereço"
-          type="text"
-          placeholder="Informe o seu endereço"
-          name="field-exp-03"
-          id="field-exp-03"
-          autocomplete="street-address"
-          status="valid"
-        />
-
         <Email
           label="E-mail"
           placeholder="Este campo é de email"
@@ -317,7 +309,7 @@ const Home = () => {
           id="field-email-01"
         />
 
-        <Input
+        <Email
           label="Email (Desabilitado)"
           type="email"
           placeholder="meu@email.com"
@@ -329,7 +321,7 @@ const Home = () => {
         <Input
           label="Senha"
           type="password"
-          placeholder="Senha com erro"
+          placeholder="Informe uma senha"
           name="field-pwd-01"
           id="field-pwd-01"
           autocomplete="new-password"
@@ -353,6 +345,7 @@ const Home = () => {
           id="field-pwd-03"
           autocomplete="new-password"
           status="error"
+          errorMsg="Selecione uma opção válida"
         />
 
         <Tel
@@ -368,6 +361,28 @@ const Home = () => {
           id="field-date-01"
           min="1950-01-01"
           max="2012-01-01"
+          required
+        />
+
+        <Input
+          label="Campo validação (ao digitar)"
+          type="text"
+          placeholder="Digite algo"
+          name="field-validate-exp-01"
+          id="field-validate-exp-01"
+          validator={fieldOnChangeValidator}
+          validatorOnChange="true"
+          required
+        />
+
+        <Input
+          label="Campo validação (ao sair do campo)"
+          type="text"
+          placeholder="Digite algo"
+          name="field-validate-exp-02"
+          id="field-validate-exp-02"
+          validator={fieldOnBlurValidator}
+          validatorOnBlur="true"
           required
         />
 

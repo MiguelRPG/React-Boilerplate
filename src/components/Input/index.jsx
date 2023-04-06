@@ -1,8 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./style.css";
 
 const Input = (props) => {
+
+  const [errorMsg, setErrorMsg] = useState(null);
+  const [touched, setTouched] = useState(false);
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    const validator = props.validator;
+
+    if (validator) {
+      const error = validator(value);
+      setErrorMsg(error);
+    }
+
+    if (props.onChange) {
+      props.onChange(event);
+    }
+  };
+
+  const handleBlur = (event) => {
+    setTouched(true);
+
+    const value = event.target.value;
+    const validator = props.validator;
+
+    if (validator) {
+      const error = validator(value);
+      setErrorMsg(error);
+    }
+  };
+
+  const isError = () => touched || errorMsg || props.errorMsg !== "" || props.status === "error";
+
   return (
     <div className="inputs">
       {props.label && (
@@ -23,26 +55,31 @@ const Input = (props) => {
           props.status ? props.status : ""
         }`}
         placeholder={props.placeholder}
-        onChange={props.onChange}
+
+        onChange={props.validatorOnChange ? handleChange : () => {}}
+        onBlur={props.validatorOnBlur ? handleBlur : () => {}}
+
         required={props.required}
         autocomplete={props.autocomplete}
         disabled={props.disabled}
         aria-required={props.required}
-        aria-invalid={props.status === "error" ? true : ""}
-        aria-describedby={props.errorMsg ? `${props.id}-error` : undefined}
+        aria-invalid={props.status === "error" || isError ? true : ""}
+        aria-describedby={isError ? `${props.id}-error` : undefined}
 
         pattern={props.pattern}
         min={props.min}
         max={props.max}
       />
 
-      {props.errorMsg && (
+      {(isError) && (
         <div
           id={`${props.id}-error`}
-          className={props.status ? props.status : ""}
+          className={
+            props.status ? props.status : (isError ? 'error' : "")
+          }
           role="alert"
         >
-          {props.errorMsg}
+          {errorMsg || props.errorMsg}
         </div>
       )}
     </div>
